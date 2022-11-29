@@ -5,8 +5,11 @@ import processId from "./routes/processId.js";
 import open from "./routes/open.js";
 import close from "./routes/close.js";
 import addComent from "./routes/addComent.js";
+import dbConnect from "./config/db.config.js";
 
 dotenv.config();
+
+dbConnect();
 
 const app = express();
 app.use(express.json());
